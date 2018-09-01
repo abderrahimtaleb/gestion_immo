@@ -1,0 +1,9 @@
+<?php
+ include_once ('cnx.php');
+
+    $cnx = new connexion();
+    $db = $cnx->getDB();
+	$rqt = ' delete from occupations where id_occupation = '.$_POST["idP"];
+	 $db->query($rqt) or die(0);
+	 echo 1;
+?>
